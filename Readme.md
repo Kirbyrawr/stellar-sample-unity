@@ -38,4 +38,4 @@ https://trello.com/b/z6cGpmi1/ustellar
 Please keep in mind that this is still a work in progress since i'm still learning a lot of things about Stellar so if anything doesn't make sense i will probably delete it from the board.
 
 
-I hope you find this interesting for you and you can expand this library more, i'm still thinking what to make with this library but there are a lot of possibilities, just please keep in mind the security of the end user.
+I hope you find this interesting for you and you can expand this integration more, i'm still thinking what to make with this integration but there are a lot of possibilities, just please keep in mind the security of the end user.
