@@ -2,6 +2,11 @@ Build Challenge
 ---------------
 This project was submitted for Build Challenge of March 2018 of Stellar Foundation, please don't make another submission just copying this integration.
 
+Before Start
+---------------
+Please take a look at the different licenses.
+Be careful as this project is very experimental.
+
 Description
 ---------------
 This repository contains the integration of the Stellar C# SDK made by Elucidsoft into Unity 3D
