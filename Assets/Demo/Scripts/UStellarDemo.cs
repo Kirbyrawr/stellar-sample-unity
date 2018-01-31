@@ -7,6 +7,6 @@ public class UStellarDemo : MonoBehaviour
     private void Awake()
     {
         //Initialize the system
-        UStellarManager.Init();
+        UStellarManagerOld.Init();
     }
 }

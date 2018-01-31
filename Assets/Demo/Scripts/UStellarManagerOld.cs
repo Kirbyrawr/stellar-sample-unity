@@ -11,7 +11,7 @@ using System.Net.Security;
 using System.Threading.Tasks;
 using System.Security.Cryptography.X509Certificates;
 
-public class UStellarManager
+public class UStellarManagerOld
 {
     public static UStellarProductsDB productsDB;
 

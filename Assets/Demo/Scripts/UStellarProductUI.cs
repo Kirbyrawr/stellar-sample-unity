@@ -11,13 +11,13 @@ public class UStellarProductUI : MonoBehaviour
 
 	public void Start() 
 	{
-		product = UStellarManager.GetProduct(productID);
+		product = UStellarManagerOld.GetProduct(productID);
 		priceLabel.text = string.Concat(product.amount, " ", product.currency.ToUpper());
 	}
 
 	public void OnClickProduct()
     {
         //Buy
-        UStellarManager.Buy(productID);
+        UStellarManagerOld.Buy(productID);
     }
 }
