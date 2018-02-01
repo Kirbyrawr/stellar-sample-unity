@@ -50,5 +50,5 @@ sysinfo.txt
 
 
 # Builds
-.vscode/settings.json
-.vscode/launch.json
+.vscode/
+.vs/
