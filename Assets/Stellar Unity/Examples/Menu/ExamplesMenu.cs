@@ -7,6 +7,11 @@ public class ExamplesMenu : MonoBehaviour
 	public List<Example> examples = new List<Example>();
 	private Example currentExample;
 
+	public void Awake() 
+	{
+        UStellar.Core.UStellarManager.Init();
+	}
+
 	public void ReturnToMenu() 
 	{
 		currentExample.Close();
@@ -14,9 +19,9 @@ public class ExamplesMenu : MonoBehaviour
 	}
 
 	//Create Account
-	public void OnClickCreateAccount() 
+	public void OnClickExample(string id) 
 	{
-		OpenExample("CREATE ACCOUNT");
+		OpenExample(id);
 	}
 
 	private void OpenExample(string id) 
