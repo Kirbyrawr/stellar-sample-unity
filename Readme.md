@@ -30,6 +30,10 @@ Click any product.
 Wait a bit without touch anything (I need to fix this)
 You will see a log in the console that is a response.
 
+Releases
+--------------
+https://github.com/Kirbyrawr/stellar-unity/releases
+
 Roadmap
 --------------
 The main roadmap can be found here
