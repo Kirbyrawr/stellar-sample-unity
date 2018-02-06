@@ -14,13 +14,18 @@ namespace UStellar.Core
 {
     public class UStellarManager
     {
-        //Parameters
-        private static string network = "";
-        private static Server server;
-        private static string network_passphrase = "Test SDF Network ; September 2015";
-
-        //Test
         public static bool test = true;
+
+        //Parameters
+        private static Server server;
+
+        //Public Parameters
+        private static string serverPublicURL = "https://horizon.stellar.org";
+        private static string networkPublicPassphrase = "Public Global Stellar Network ; September 2015";
+
+        //Test Parameters
+        private static string serverTestURL = "https://horizon-testnet.stellar.org";
+        private static string networkTestPassphrase = "Test SDF Network ; September 2015";
 
         public static void Init()
         {
@@ -31,19 +36,30 @@ namespace UStellar.Core
             SetNetwork();
         }
 
-        public static void SetNetwork()
+        private static void SetNetwork()
         {
             if (test)
             {
-                network = "test";
                 stellar_dotnetcore_sdk.Network.UseTestNetwork();
-                server = new Server("https://horizon-testnet.stellar.org");
+                server = new Server(serverTestURL);
             }
             else
             {
-                network = "public";
                 stellar_dotnetcore_sdk.Network.UsePublicNetwork();
+                server = new Server(serverPublicURL);
             }
+        }
+
+        public static void SetPublicNetwork(string serverURL, string networkPassphrase) 
+        {
+            serverPublicURL = serverURL;
+            networkPublicPassphrase = networkPassphrase;
+        }
+
+        public static void SetTestNetwork(string serverURL, string networkPassphrase) 
+        {
+            serverTestURL = serverURL;
+            networkTestPassphrase = networkPassphrase;
         }
 
 		public static Server GetServer() 
@@ -53,16 +69,8 @@ namespace UStellar.Core
 
         public static bool IsTestNetwork()
         {
-            if (network == "test")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return test;
         }
-		
 
         //Workaround... I don't like this and needs to be changed.
         public static bool MyRemoteCertificateValidationCallback(System.Object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
