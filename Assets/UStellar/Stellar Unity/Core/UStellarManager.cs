@@ -40,12 +40,14 @@ namespace UStellar.Core
         {
             if (test)
             {
-                stellar_dotnetcore_sdk.Network.UseTestNetwork();
+                Network network = new Network(networkTestPassphrase);
+                stellar_dotnetcore_sdk.Network.Use(network);
                 server = new Server(serverTestURL);
             }
             else
             {
-                stellar_dotnetcore_sdk.Network.UsePublicNetwork();
+                Network network = new Network(networkPublicPassphrase);
+                stellar_dotnetcore_sdk.Network.Use(network);
                 server = new Server(serverPublicURL);
             }
         }
