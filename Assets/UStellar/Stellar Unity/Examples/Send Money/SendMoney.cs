@@ -80,12 +80,13 @@ namespace UStellar.Examples
             try
             {
                 WriteToLog("Sending Transaction", 2);
-                SubmitTransactionResponse response = await server.SubmitTransaction(transaction);
+                await server.SubmitTransaction(transaction);
                 WriteToLog("Success!", 1);
             }
             catch (Exception exception)
             {
                 WriteToLog("Something went wrong", 2);
+                WriteToLog("Exception: " + exception.Message, 1);
                 // If the result is unknown (no response body, timeout etc.) we simply resubmit
                 // already built transaction:
                 // SubmitTransactionResponse response = server.submitTransaction(transaction);
