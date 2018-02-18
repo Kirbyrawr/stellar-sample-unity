@@ -11,7 +11,7 @@ Use this at your own risk, it should be ok for use in production but please keep
 
 Requeriments
 ---------------
-Unity 2018.1.0b4 (Beta)
+Unity 2018.1.0b7 (Beta)
 Setting up the project to work with Net Standard 2.0 (Experimental)
 
 Examples
