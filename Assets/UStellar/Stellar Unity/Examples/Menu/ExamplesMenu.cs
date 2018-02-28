@@ -9,6 +9,7 @@ public class ExamplesMenu : MonoBehaviour
 
 	public void Awake() 
 	{
+		UStellar.Core.UStellarManager.SetStellarTestNetwork();
         UStellar.Core.UStellarManager.Init();
 	}
 

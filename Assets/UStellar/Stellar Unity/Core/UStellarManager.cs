@@ -14,64 +14,66 @@ namespace UStellar.Core
 {
     public class UStellarManager
     {
-        public static bool test = true;
+        private static Network network = null;
+        private static Server server = null;
 
-        //Parameters
-        private static Server server;
-
-        //Public Parameters
-        private static string serverPublicURL = "https://horizon.stellar.org";
-        private static string networkPublicPassphrase = "Public Global Stellar Network ; September 2015";
-
-        //Test Parameters
-        private static string serverTestURL = "https://horizon-testnet.stellar.org";
-        private static string networkTestPassphrase = "Test SDF Network ; September 2015";
-
-        public static void Init()
+        public static void Init(bool debug = true)
         {
-            //Workaround of Unity
+            //Workaround of Unity.
             ServicePointManager.ServerCertificateValidationCallback = MyRemoteCertificateValidationCallback;
 
-            //Set Stellar Data
-            SetNetwork();
-        }
+            //Enable/Disable Debug.
+            UStellarDebug.SetDebug(debug);
 
-        private static void SetNetwork()
-        {
-            if (test)
+            UStellarDebug.Debug(string.Concat("Stellar SDK Init"));
+
+            //Check if Network is null for give a simple warning.
+            if (network == null)
             {
-                Network network = new Network(networkTestPassphrase);
-                stellar_dotnetcore_sdk.Network.Use(network);
-                server = new Server(serverTestURL);
-            }
-            else
-            {
-                Network network = new Network(networkPublicPassphrase);
-                stellar_dotnetcore_sdk.Network.Use(network);
-                server = new Server(serverPublicURL);
+                UStellarDebug.Debug("Network is not setup, please set the one from Stellar or a custom one", DebugType.Warning);
             }
         }
 
-        public static void SetPublicNetwork(string serverURL, string networkPassphrase) 
+        public static void SetStellarPublicNetwork()
         {
-            serverPublicURL = serverURL;
-            networkPublicPassphrase = networkPassphrase;
+            Network network = new Network(UStellarUtils.STELLAR_PUBLIC_NETWORK_PASSPHRASE);
+            Server server = new Server(UStellarUtils.STELLAR_PUBLIC_SERVER_URL);
+            SetNetwork(network, server);
         }
 
-        public static void SetTestNetwork(string serverURL, string networkPassphrase) 
+        public static void SetStellarTestNetwork()
         {
-            serverTestURL = serverURL;
-            networkTestPassphrase = networkPassphrase;
+            Network network = new Network(UStellarUtils.STELLAR_TEST_NETWORK_PASSPHRASE);
+            Server server = new Server(UStellarUtils.STELLAR_TEST_SERVER_URL);
+            SetNetwork(network, server);
         }
 
-		public static Server GetServer() 
-		{
-			return server;
-		}
-
-        public static bool IsTestNetwork()
+        public static Network GetNetwork()
         {
-            return test;
+            return network;
+        }
+
+        public static void SetNetwork(Network network, Server server)
+        {
+            UStellarManager.network = network;
+            stellar_dotnetcore_sdk.Network.Use(network);
+
+            UStellarDebug.Debug(string.Concat("Network Setup", Environment.NewLine,
+                                              "Passphrase: ", network.NetworkPassphrase), DebugType.Info);
+
+            SetServer(server);
+        }
+
+        public static Server GetServer()
+        {
+            return server;
+        }
+
+        public static void SetServer(Server server)
+        {
+            UStellarManager.server = server;
+
+            UStellarDebug.Debug("Server Setup", DebugType.Info);
         }
 
         //Workaround... I don't like this and needs to be changed.
