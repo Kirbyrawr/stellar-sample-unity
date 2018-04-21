@@ -16,8 +16,8 @@ Use this at your own risk, it should be ok for use in production but please keep
 
 Requeriments
 ---------------
-Unity 2018.1.0b and forward.
-Setting up the project to work with Net Standard 2.0
+Unity 2018.2.0b1 and forward.
+Net Standard 2.0 Project (You can enable it in Build Settings, check Unity manual)
 
 Blog
 --------------
