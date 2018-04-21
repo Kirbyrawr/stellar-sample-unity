@@ -1,13 +1,15 @@
 Description
 ---------------
 This repository contains the base integration of the Stellar C# SDK (Elucidsoft), some libraries were changed for work into Unity 3D.
+
 The integration contains a core manager and interactive examples.
 
-Please don't submit this repository alone, to the Stellar Build Challenge.
+You shouldn't submit this SDK/Integration alone to the Stellar Build Challenge (SBC), but you can upload other projects that use this library.
 
 Licenses
 ---------------
 Take a look at the different licenses before use, usually the licenses are Apache 2.0.
+
 You can use this for both commercial and personal projects if you follow the licenses.
 
 Risks
