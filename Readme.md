@@ -11,7 +11,9 @@ Take a look at the different licenses before use, usually the licenses are Apach
 You can use this for both commercial and personal projects if you follow the licenses.
 
 At the end of the license you have 2 additional things to keep in mind:
+
 -No upload to Asset Store (Unity 3D)
+
 -No upload to Stellar Build Challenge (SBC)
 
 Risks
