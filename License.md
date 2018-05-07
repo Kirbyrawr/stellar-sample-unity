@@ -1,11 +1,3 @@
-Disclaimer
--------------
-The next License goes for the integration into Unity and for the different scripts created using this integration.
-
-This integration contains work from other people, you can find the licenses of the respective work under the every subfolder that is contained in "Stellar C# SDK" folder.
-
-
-
                                  Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
@@ -183,18 +175,7 @@ This integration contains work from other people, you can find the licenses of t
 
    END OF TERMS AND CONDITIONS
 
-   APPENDIX: How to apply the Apache License to your work.
-
-      To apply the Apache License to your work, attach the following
-      boilerplate notice, with the fields enclosed by brackets "[]"
-      replaced with your own identifying information. (Don't include
-      the brackets!)  The text should be enclosed in the appropriate
-      comment syntax for the file format. We also recommend that a
-      file or class name and description of purpose be included on the
-      same "printed page" as the copyright notice for easier
-      identification within third-party archives.
-
-   Copyright [2018] [Kirbyrawr]
+   Copyright 2018 Kirbyrawr
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
@@ -209,3 +190,5 @@ This integration contains work from other people, you can find the licenses of t
    limitations under the License.
 
 -----
+
+Additionally, you can't submit this project to the SBC (Stellar Build Challenge) nor Unity Asset Store without major changes to the project, projects using the integration are fine to be uploaded anywhere.
