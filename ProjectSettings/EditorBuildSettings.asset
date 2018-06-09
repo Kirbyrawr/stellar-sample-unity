@@ -4,4 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/UStellar/Stellar Unity/Examples/Scenes/Menu.unity
+    guid: fa34fe42789f8410b8a5ab8d07e72e10
+  m_configObjects: {}
