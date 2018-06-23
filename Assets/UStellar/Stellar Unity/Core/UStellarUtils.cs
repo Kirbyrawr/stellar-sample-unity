@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using stellar_dotnetcore_sdk;
-using stellar_dotnetcore_sdk.responses;
-using stellar_dotnetcore_sdk.requests;
+using stellar_dotnet_sdk;
+using stellar_dotnet_sdk.responses;
+using stellar_dotnet_sdk.requests;
 
 namespace UStellar.Core
 {

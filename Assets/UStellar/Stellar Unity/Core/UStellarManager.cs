@@ -1,8 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using stellar_dotnetcore_sdk;
-using stellar_dotnetcore_sdk.responses;
-using stellar_dotnetcore_sdk.requests;
+using stellar_dotnet_sdk;
+using stellar_dotnet_sdk.responses;
+using stellar_dotnet_sdk.requests;
 using System;
 using System.Net;
 using System.Net.Http;
@@ -15,21 +15,18 @@ namespace UStellar.Core
     {
         private static Network network = null;
         private static Server server = null;
+        private static bool debug = false;
 
-        public static void Init(bool debug = true)
+        public static void Init()
         {
             //Enable/Disable Debug.
             UStellarDebug.SetDebug(debug);
 
-            UStellarDebug.Debug(string.Concat("Stellar SDK Init"));
-
-            //Check if Network is null for give a simple warning.
-            if (network == null)
-            {
-                UStellarDebug.Debug("Network is not setup, please set the one from Stellar or a custom one", DebugType.Warning);
-            }
+            //Info
+            UStellarDebug.Debug(string.Concat("Stellar SDK - Started"));
         }
 
+        #region Helpers
         public static void SetStellarPublicNetwork()
         {
             Network network = new Network(UStellarUtils.STELLAR_PUBLIC_NETWORK_PASSPHRASE);
@@ -43,25 +40,41 @@ namespace UStellar.Core
             Server server = new Server(UStellarUtils.STELLAR_TEST_SERVER_URL);
             SetNetwork(network, server);
         }
+        #endregion
 
+        #region Network
         public static Network GetNetwork()
         {
+            //Info
+            if(network == null) 
+            {
+                UStellarDebug.Debug(string.Concat("Stellar SDK - You don't have any 'Network' set up!"), DebugType.Warning);
+            }
+
             return network;
         }
 
         public static void SetNetwork(Network network, Server server)
         {
             UStellarManager.network = network;
-            stellar_dotnetcore_sdk.Network.Use(network);
+            stellar_dotnet_sdk.Network.Use(network);
 
             UStellarDebug.Debug(string.Concat("Network Setup", Environment.NewLine,
                                               "Passphrase: ", network.NetworkPassphrase), DebugType.Info);
 
             SetServer(server);
         }
+        #endregion
 
+        #region Server
         public static Server GetServer()
         {
+            //Info
+            if(server == null) 
+            {
+                UStellarDebug.Debug(string.Concat("Stellar SDK - You don't have any 'Server' set up!"), DebugType.Warning);
+            }
+
             return server;
         }
 
@@ -71,5 +84,6 @@ namespace UStellar.Core
 
             UStellarDebug.Debug("Server Setup", DebugType.Info);
         }
+        #endregion
     }
 }
