@@ -6,29 +6,29 @@ The integration contains a core manager and interactive examples.
   
 Licenses
 -
-There are 3 plugins:
- -Newtonsoft JSON (*Apache 2.0*)
- -Nett (*Apache 2.0*)
- -Stellar Dotnet SDK (*Apache 2.0*)
+This project contains these third party libraries:
+ - Newtonsoft JSON (*Apache 2.0*)
+ - Nett (*Apache 2.0*)
+ - Stellar Dotnet SDK (*Apache 2.0*)
 
-This project itself is also *Apache 2.0*, but it have some additional clauses.
+This integration is also *Apache 2.0* but it have some additional clauses.
 
 Those clauses are the followings:
 - You must not upload this SDK to the Unity Asset Store.
-- You must not upload this SDK to the Stellar Build Challenge. 
+- You must not upload this SDK without major changes to the Stellar Build Challenge. 
 *(You can still upload contributions or projects you made with it)*
   
 Platforms
 -
-**Works**
+#### Works
 - PC  
 - Mac  
 - Android
 
-**Doesn't work**
+#### Doesn't work
  - WebGL (Threading support is on Unity Roadmap)
 
-**Not tested**
+#### Not tested
 - iOS
 - Linux
 - Others
