@@ -15,7 +15,7 @@ This project itself is also *Apache 2.0*, but it have some additional clauses.
 
 Those clauses are the followings:
 - You must not upload this SDK to the Unity Asset Store.
-- You must not upload this SDK without major changes to the Stellar Build Challenge. 
+- You must not upload this SDK to the Stellar Build Challenge. 
 *(You can still upload contributions or projects you made with it)*
   
 Platforms
