@@ -1,48 +1,59 @@
 Description
----------------
-This repository contains the base integration of the Stellar C# SDK (Elucidsoft), some libraries were changed for work into Unity 3D.
+-
+This repository is an integration of the [Stellar C# SDK](https://github.com/elucidsoft/dotnet-stellar-sdk), into Unity 3D.
 
 The integration contains a core manager and interactive examples.
   
 Licenses
----------------
-Take a look at the different licenses before use, usually the licenses are Apache 2.0.  
+-
+There are 3 plugins:
+ -Newtonsoft JSON (*Apache 2.0*)
+ -Nett (*Apache 2.0*)
+ -Stellar Dotnet SDK (*Apache 2.0*)
 
-You can use this for both commercial and personal projects if you follow the licenses.  
+This project itself is also *Apache 2.0*, but it have some additional clauses.
 
-At the end of the license you have 2 additional things to keep in mind:  
--No upload to Asset Store (Unity 3D)  
--No upload to Stellar Build Challenge (SBC)
-  
-Risks
----------------
-Use this at your own risk, it should be ok for use in production but please keep the end user secure.
+Those clauses are the followings:
+- You must not upload this SDK to the Unity Asset Store.
+- You must not upload this SDK without major changes to the Stellar Build Challenge. 
+*(You can still upload contributions or projects you made with it)*
   
 Platforms
----------------
-Works on:  
--PC  
--Mac  
--Android
-  
-Doesn't work so far on (If it's not here i couldn't test it):  
--WebGL (Multithreading is not added for WebGL, it's on the roadmap of Unity however)
-  
+-
+**Works**
+- PC  
+- Mac  
+- Android
+
+**Doesn't work**
+ - WebGL (Threading support is on Unity Roadmap)
+
+**Not tested**
+- iOS
+- Linux
+- Others
+
 Requeriments
----------------
-·Unity 2018.2.0b1 and forward.    
-·NET Standard 2.0 enabled for build.  
-  
-·Android:  
-  -Internet Access should be set to required in the build settings.  
-  -Compiler must be set to Mono
+-
+- Unity 2018.2.0f2 (and forward).
+- NET Standard 2.0 enabled in project.
+
+Platform Requeriments
+-
+- Android:  
+  - Internet Access should be set to required in the build settings.  
+  - Compiler must be set to Mono
   
 Links
---------------
-Releases: https://github.com/Kirbyrawr/stellar-unity/releases  
-Blog: https://stellaru.wordpress.com/  
-Roadmap: https://trello.com/b/z6cGpmi1/ustellar  
+-
+- [Releases](https://github.com/Kirbyrawr/stellar-unity/releases)
+- [Blog](https://stellaru.wordpress.com)
+- [Roadmap](https://trello.com/b/z6cGpmi1/ustellar)
 
 Donation Address
---------------
-GC56KHQGVMRGASSSNP2QIDOPQVAD5AJ7DPJ57MIKKPWUGJEJEZGY4AIM
+-
+If you feel like this was useful to you or want to show appreciation here is the donation address.
+
+*Disclaimer: This is not mandatory, the donations will be used for support the SDK and for improve it, however the development will continue without, them unless something major happens.*
+
+**GC56KHQGVMRGASSSNP2QIDOPQVAD5AJ7DPJ57MIKKPWUGJEJEZGY4AIM**
