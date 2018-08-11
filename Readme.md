@@ -3,7 +3,10 @@ Description
 This repository is an integration of the [Stellar C# SDK](https://github.com/elucidsoft/dotnet-stellar-sdk), into Unity 3D.
 
 The integration contains a core manager and interactive examples.
-  
+
+For documentation and more examples go to the Github Pages of the original C# repository.
+https://elucidsoft.github.io/dotnet-stellar-sdk/api/index.html
+
 Licenses
 -
 This project contains these third party libraries:
@@ -15,9 +18,9 @@ This integration is also *Apache 2.0* but it have some additional clauses.
 
 Those clauses are the followings:
 - You must not upload this SDK to the Unity Asset Store.
-- You must not upload this SDK without major changes to the Stellar Build Challenge. 
+- You must not upload this SDK without major changes to the Stellar Build Challenge.
 *(You can still upload contributions or projects you made with it)*
-  
+
 Platforms
 -
 #### Works
@@ -26,7 +29,7 @@ Platforms
 - Android
 
 #### Doesn't work
- - WebGL (Threading support is on Unity Roadmap)
+ - WebGL (Threading Support is planned for Unity 2018.3.0)
 
 #### Not tested
 - iOS
@@ -35,20 +38,22 @@ Platforms
 
 Requeriments
 -
+#### General Requeriments
 - Unity 2018.2.0f2 (and forward).
 - NET Standard 2.0 enabled in project.
 
-Platform Requeriments
--
+#### Platform Requeriments
+
 - Android:  
   - Internet Access should be set to required in the build settings.  
   - Compiler must be set to Mono
-  
+
 Links
 -
 - [Releases](https://github.com/Kirbyrawr/stellar-unity/releases)
 - [Blog](https://stellaru.wordpress.com)
 - [Roadmap](https://trello.com/b/z6cGpmi1/ustellar)
+- [C# SDK Reference](https://elucidsoft.github.io/dotnet-stellar-sdk/api/index.html)
 
 Donation Address
 -
