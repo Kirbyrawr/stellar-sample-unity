@@ -22,31 +22,43 @@ namespace UStellar.Examples
     /// </summary>
     public class CreateAccount : Example
     {
-        public override string id
+        public override int id
         {
             get
             {
-               return "CREATE ACCOUNT";
+                return 0;
             }
         }
 
-        public Text log;
+        public override string title
+        {
+            get
+            {
+                return "CREATE ACCOUNT";
+            }
+        }
+
+        public override string description
+        {
+            get
+            {
+                return "This example will generate a KeyPair with a random public address and a secret seed.";
+            }
+        }
 
         public override void Run()
+        {
+            base.Run();
+        }
+
+        private void GenerateAccountKeyPair()
         {
             //Create new random Keypair
             KeyPair newKeyPair = KeyPair.Random();
 
-            //Build the message for the log
-            string logMessage = string.Empty;
-            logMessage = string.Concat("Public: ", newKeyPair.AccountId, Environment.NewLine);
-            logMessage += string.Concat(Environment.NewLine, "Secret: ", newKeyPair.SecretSeed);
-            WriteToLog(logMessage);
-        }
-
-        private void WriteToLog(string message)
-        {
-            log.text = message;
+            //Log it
+            Log(string.Concat("Public: ", newKeyPair.AccountId), 0);
+            Log(string.Concat("Secret: ", newKeyPair.SecretSeed));
         }
     }
 }
