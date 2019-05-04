@@ -19,35 +19,50 @@ namespace UStellar.Examples
     /// When you run the example, you will get the public and secret keys.
     /// For this account to exist in the Stellar Network you need to send at least 1 lumen to the PublicKey address.
     /// </summary>
-    public class SendMoney : Example
+    public class SendXLM : Example
     {
-        public override string id
+        public override int id
         {
             get
             {
-                return "SEND MONEY";
+                return 2;
             }
         }
 
-        public Text log;
-        public string source = "SAN3TG3EK55WPVKIELONQ37UL74JBXUCCNASDBC2Q7LQDN7GB6Q5CKXZ";
-        public string destination = "GCSAVWAQ4BXYV2AGFHYZDOTOHZMP3LAZYWP4MBFXU6WBC3KQT5CXAHZF";
+        public override string title
+        {
+            get
+            {
+                return "SEND XLM";
+            }
+        }
+
+        public override string description
+        {
+            get
+            {
+                return "This example will send 1 lumen (XLM) from one account to other";
+            }
+        }
+        public string source = "SCP3AQU23D37FQUCHWJRJIMBVFPYQDJOT6BKE3SWCBQLHY7EDVWQKZTZ";
+        public string destination = "GBDEVTTEGN4ENGJ4WDYQQUWVRK6BTABBMHCNZEIENERZDMD5ADYYWTJA";
 
         public override void Run()
         {
+            base.Run();
             RunAsync();
         }
 
-        private async void RunAsync() 
+        private async void RunAsync()
         {
             Server server = UStellarManager.GetServer();
 
             KeyPair sourceKeyPair = KeyPair.FromSecretSeed(source);
 
             //Check if the destination account exists in the server.
-            WriteToLog("Checking if destination account exists in server", 0);
+            Log("Checking if destination account exists in server", 0);
             await server.Accounts.Account(destination);
-            WriteToLog("Done", 1);
+            Log("Done");
 
             //Load up to date information in source account
             await server.Accounts.Account(sourceKeyPair.AccountId);
@@ -63,39 +78,25 @@ namespace UStellar.Examples
             Transaction transaction = new Transaction.Builder(sourceAccount).AddOperation(operation).Build();
 
             //Sign Transaction
-            WriteToLog("Signing Transaction", 2);
+            Log("Signing Transaction", 2);
             transaction.Sign(KeyPair.FromSecretSeed(source));
-            WriteToLog("Done", 1);
+            Log("Done");
 
             //Try to send the transaction
             try
             {
-                WriteToLog("Sending Transaction", 2);
+                Log("Sending Transaction", 2);
                 await server.SubmitTransaction(transaction);
-                WriteToLog("Success!", 1);
+                Log("Success!", 1);
             }
             catch (Exception exception)
             {
-                WriteToLog("Something went wrong", 2);
-                WriteToLog("Exception: " + exception.Message, 1);
+                Log("Something went wrong", 2);
+                Log("Exception: " + exception.Message, 1);
                 // If the result is unknown (no response body, timeout etc.) we simply resubmit
                 // already built transaction:
                 // SubmitTransactionResponse response = server.submitTransaction(transaction);
             }
-        }
-
-        private void WriteToLog(string message, int newLines)
-        {
-            string finalMessage = log.text;
-
-            for (int i = 0; i < newLines; i++)
-            {
-                finalMessage += Environment.NewLine;
-            }
-
-            finalMessage += message;
-
-            log.text = finalMessage;
         }
     }
 }
