@@ -44,8 +44,8 @@ namespace UStellar.Examples
                 return "This example will send 1 lumen (XLM) from one account to other";
             }
         }
-        public string source = "SCP3AQU23D37FQUCHWJRJIMBVFPYQDJOT6BKE3SWCBQLHY7EDVWQKZTZ";
-        public string destination = "GBDEVTTEGN4ENGJ4WDYQQUWVRK6BTABBMHCNZEIENERZDMD5ADYYWTJA";
+        public string source = "SCVCCU3FRWJKKYDN5ZHN7BNWZ6S4HNQC3YF6KGLW3UHPPIP62BAFMICV";
+        public string destination = "GAJYHLBGA5BFMMDJJONRZLPU33GARC2GFAKQBXQHJRXO22N5SQSXZE45";
 
         public override void Run()
         {
