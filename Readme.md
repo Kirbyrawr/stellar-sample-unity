@@ -27,13 +27,13 @@ Platforms
 - PC  
 - Mac  
 - Android
-
-#### Doesn't work
- - WebGL (Threading Support is planned for Unity 2018.3.0)
-
-#### Not tested
 - iOS
 - Linux
+
+#### Doesn't work
+ - WebGL (Threading is not supported yet) 
+
+#### Not tested
 - Others
 
 Requeriments
@@ -45,8 +45,7 @@ Requeriments
 #### Platform Requeriments
 
 - Android:  
-  - Internet Access should be set to required in the build settings.  
-  - Compiler must be set to Mono
+  - Internet Access should be set to required in the build settings.
 
 Links
 -
