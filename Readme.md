@@ -27,13 +27,13 @@ Platforms
 - PC  
 - Mac  
 - Android
-
-#### Doesn't work
- - WebGL (Threading Support is planned for Unity 2018.3.0)
-
-#### Not tested
 - iOS
 - Linux
+
+#### Doesn't work
+ - WebGL (Threading is not supported yet) 
+
+#### Not tested
 - Others
 
 Requeriments
@@ -45,14 +45,11 @@ Requeriments
 #### Platform Requeriments
 
 - Android:  
-  - Internet Access should be set to required in the build settings.  
-  - Compiler must be set to Mono
+  - Internet Access should be set to required in the build settings.
 
 Links
 -
 - [Releases](https://github.com/Kirbyrawr/stellar-unity/releases)
-- [Blog](https://stellaru.wordpress.com)
-- [Roadmap](https://trello.com/b/z6cGpmi1/ustellar)
 - [C# SDK Reference](https://elucidsoft.github.io/dotnet-stellar-sdk/api/index.html)
 
 Donation Address
