@@ -49,6 +49,7 @@ namespace UStellar.Examples
         public override void Run()
         {
             base.Run();
+            GenerateAccountKeyPair();
         }
 
         private void GenerateAccountKeyPair()
@@ -58,7 +59,7 @@ namespace UStellar.Examples
 
             //Log it
             Log(string.Concat("Public: ", newKeyPair.AccountId), 0);
-            Log(string.Concat("Secret: ", newKeyPair.SecretSeed));
+            Log(string.Concat("Secret: ", newKeyPair.SecretSeed), 2);
         }
     }
 }
