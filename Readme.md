@@ -50,8 +50,6 @@ Requeriments
 Links
 -
 - [Releases](https://github.com/Kirbyrawr/stellar-unity/releases)
-- [Blog](https://stellaru.wordpress.com)
-- [Roadmap](https://trello.com/b/z6cGpmi1/ustellar)
 - [C# SDK Reference](https://elucidsoft.github.io/dotnet-stellar-sdk/api/index.html)
 
 Donation Address
