@@ -1,17 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using stellar_dotnet_sdk;
-using stellar_dotnet_sdk.responses;
-using stellar_dotnet_sdk.requests;
+﻿using stellar_dotnet_sdk;
 using System;
-using System.Net;
-using System.Net.Http;
-using System.Threading.Tasks;
-using UStellar.Core;
-
-
-using UnityEngine.UI;
 
 namespace UStellar.Examples
 {
