@@ -49,6 +49,7 @@ namespace UStellar.Examples
         {
             root.alpha = 0;
             root.blocksRaycasts = false;
+            runButton.onClick.RemoveAllListeners();
         }
 
         public void SetExample(Example example)

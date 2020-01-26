@@ -1,17 +1,5 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using stellar_dotnet_sdk;
-using stellar_dotnet_sdk.responses;
-using stellar_dotnet_sdk.requests;
+﻿using stellar_dotnet_sdk;
 using System;
-using System.Net;
-using System.Net.Http;
-using System.Threading.Tasks;
-using UStellar.Core;
-
-
-using UnityEngine.UI;
 
 namespace UStellar.Examples
 {
@@ -49,6 +37,7 @@ namespace UStellar.Examples
         public override void Run()
         {
             base.Run();
+            GenerateAccountKeyPair();
         }
 
         private void GenerateAccountKeyPair()
@@ -58,7 +47,7 @@ namespace UStellar.Examples
 
             //Log it
             Log(string.Concat("Public: ", newKeyPair.AccountId), 0);
-            Log(string.Concat("Secret: ", newKeyPair.SecretSeed));
+            Log(string.Concat("Secret: ", newKeyPair.SecretSeed), 2);
         }
     }
 }
