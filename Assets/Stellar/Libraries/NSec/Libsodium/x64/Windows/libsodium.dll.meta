@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: a1511dbf580fc064f98caae74fed828d
+guid: a1eea8071ee269e41aa4ed44d05bb326
 PluginImporter:
   externalObjects: {}
   serializedVersion: 2
   iconMap: {}
   executionOrder: {}
   defineConstraints: []
-  isPreloaded: 0
+  isPreloaded: 1
   isOverridable: 0
   isExplicitlyReferenced: 0
   validateReferences: 1
@@ -18,11 +18,9 @@ PluginImporter:
       settings:
         Exclude Android: 1
         Exclude Editor: 0
-        Exclude Linux: 0
         Exclude Linux64: 0
-        Exclude LinuxUniversal: 0
         Exclude OSXUniversal: 0
-        Exclude Win: 0
+        Exclude Win: 1
         Exclude Win64: 0
   - first:
       Android: Android
@@ -40,35 +38,11 @@ PluginImporter:
     second:
       enabled: 1
       settings:
-        CPU: x86
+        CPU: x86_64
         DefaultValueInitialized: true
-        OS: AnyOS
-  - first:
-      Facebook: Win
-    second:
-      enabled: 0
-      settings:
-        CPU: AnyCPU
-  - first:
-      Facebook: Win64
-    second:
-      enabled: 0
-      settings:
-        CPU: None
-  - first:
-      Standalone: Linux
-    second:
-      enabled: 1
-      settings:
-        CPU: x86
+        OS: Windows
   - first:
       Standalone: Linux64
-    second:
-      enabled: 1
-      settings:
-        CPU: AnyCPU
-  - first:
-      Standalone: LinuxUniversal
     second:
       enabled: 1
       settings:
@@ -82,9 +56,9 @@ PluginImporter:
   - first:
       Standalone: Win
     second:
-      enabled: 1
+      enabled: 0
       settings:
-        CPU: x86
+        CPU: None
   - first:
       Standalone: Win64
     second:
