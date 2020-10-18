@@ -1,4 +1,4 @@
-# stellar-unity-sample
+# stellar-sample-unity
 
 ## Description
 
