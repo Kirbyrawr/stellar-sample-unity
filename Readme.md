@@ -7,7 +7,7 @@ For documentation and more examples go to the Github Pages of the original C# re
 https://elucidsoft.github.io/dotnet-stellar-sdk/api/index.html
 
 ## Installation in another project
-If you just want to use the sdk in another project, please go to https://github.com/Kirbyrawr/stellar-dotnet-sdk
+If you just want to use the sdk in another project, please go to https://github.com/Kirbyrawr/stellar-sdk-unity
 
 ## Donation Address
 
