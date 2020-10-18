@@ -75,7 +75,7 @@ namespace UStellar.Examples
             string amount = "1";
 
             PaymentOperation operation = new PaymentOperation.Builder(KeyPair.FromAccountId(destination), asset, amount).SetSourceAccount(sourceAccount.KeyPair).Build();
-            Transaction transaction = new Transaction.Builder(sourceAccount).AddOperation(operation).Build();
+            Transaction transaction = new TransactionBuilder(sourceAccount).AddOperation(operation).Build();
 
             //Sign Transaction
             Log("Signing Transaction", 2);
